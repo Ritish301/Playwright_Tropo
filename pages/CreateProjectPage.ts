@@ -69,7 +69,7 @@ export class CreateProjectPage {
 
     // Step 1
     this.projectNameInput = page.getByRole('textbox').first();
-    this.schemeDropdownTrigger = page.locator('div').filter({ hasText: /^Select$/ }).first();
+    this.schemeDropdownTrigger = page.getByText('Select Scheme').nth(1);
 
     // Step 2
     this.chooseProfileFileButton = page.getByRole('button', { name: 'Choose File' });
